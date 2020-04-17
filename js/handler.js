@@ -4,6 +4,7 @@ class Handler {
   }
   budgetFormHandler(event) {
     event.preventDefault();
+    this.ui.submitBudgetForm();
     log.push({
       handler: "budgetForm",
       object: JSON.parse(JSON.stringify(this.ui)),
