@@ -5,5 +5,5 @@ function eventListeners() {
   ui.expenseForm.addEventListener("submit", (event) => handler.expenseFormHandler(event));
   ui.expenseList.addEventListener("click", (event) => handler.expenseListHandler(event));
 }
-debugger;
+//debugger;
 document.addEventListener("DOMContentLoaded", eventListeners());

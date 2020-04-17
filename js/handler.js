@@ -21,12 +21,16 @@ class Handler {
   expenseListHandler(event) {
     if (event.target.parentElement.classList.contains("edit-icon")) {
       this.ui.editExpense(event.target.parentElement);
+      log.push({
+        handler: "editExpense",
+        object: JSON.parse(JSON.stringify(this.ui)),
+      });
     } else if (event.target.parentElement.classList.contains("delete-icon")) {
       this.ui.deleteExpense(event.target.parentElement);
+      log.push({
+        handler: "deleteExpense",
+        object: JSON.parse(JSON.stringify(this.ui)),
+      });
     }
-    log.push({
-      handler: "expenseList",
-      object: JSON.parse(JSON.stringify(this.ui)),
-    });
   }
 }
