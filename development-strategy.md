@@ -23,3 +23,11 @@ Building this site one step at a time
 - Initial UI class with properties and methods to interact with the user, handler class with methods to execute when the user submit a new budget, expense or interacts with the expenses list, event listeners for the HTML elements the user is interacting and the log array to store the user events history
 
 ---
+
+## 2. User Story: `Budget form`
+
+- A user can add a budget to the application, the amount must be greater or equal to 0, the user will be notified in case of an input error, if successful the amount will be loaded to the screen and the final balance will be calculated
+- I wrote the code in `js/ui.js` and `js/handler.js`
+- The handler calls the function responsible of adding a budget and process the form inputs, the handler is called using the `submit` event of the `budgetForm` HTML element.
+
+---
