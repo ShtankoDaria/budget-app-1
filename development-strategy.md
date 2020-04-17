@@ -34,8 +34,16 @@ Building this site one step at a time
 
 ## 3. User Story: `Expense form`
 
-- A user can add a expense to the application, the expense title must not be empty and the amount must be greater or equal to 0, the user will be notified in case of an input error, if successful the new expense will be put on screen and the balance is updated
+- A user can add an expense to the application, the expense title must not be empty and the amount must be greater or equal to 0, the user will be notified in case of an input error, if successful the new expense will be put on screen and the balance is updated
 - I wrote the code in `js/ui.js` and `js/handler.js`
-- The handler calls the function responsible of adding a expense and process the form inputs, the handler is called using the `submit` event of the `expenseForm` HTML element.
+- The handler calls the function responsible of adding an expense and process the form inputs, the handler is called using the `submit` event of the `expenseForm` HTML element.
+
+---
+
+## 4. User Story: `Edit expense`
+
+- A user can edit an expense in the expenses list, the expense must remove the expense form the list and fill the expenseForm with the selected expense title and amount
+- I wrote the code in `js/ui.js` and `js/handler.js`
+- The handler calls the function responsible of editing an expense from the list, the handler is called using the `click` event of the `expenseList` HTML element.
 
 ---

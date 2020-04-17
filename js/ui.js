@@ -88,6 +88,17 @@ class UI {
       `;
     this.expenseList.appendChild(div);
   }
+  editExpense(element) {
+    let id = parseInt(element.dataset.id);
+    let parent = element.parentElement.parentElement.parentElement;
+    this.expenseList.removeChild(parent);
+    let expense = this.itemList.filter((item) => item.id === id);
+    this.expenseInput.value = expense[0].title;
+    this.amountInput.value = expense[0].amount;
+    this.itemList = this.itemList.filter((item) => item.id !== id);
+    this.showBalance();
+  }
+  deleteExpense(element) {}
   totalExpense() {
     let total = 0;
     if (this.itemList.length > 0) {
