@@ -52,10 +52,10 @@ class UI {
         "<p>value cannot be empty or negative</p>";
       setTimeout(() => this.expenseFeedback.classList.remove("showItem"), 4000);
     } else {
-      let amount = parseInt(amountval);
+      const amount = parseInt(amountval);
       this.expenseInput.value = "";
       this.amountInput.value = "";
-      let expense = {
+      const expense = {
         id: this.itemID,
         title: expenseval,
         amount: amount,
@@ -75,7 +75,7 @@ class UI {
       <h6 class="expense-title mb-0 text-uppercase list-item">- ${expense.title}</h6>
       <h5 class="expense-amount mb-0 list-item">${expense.amount}</h5>
 
-      <div class="expense-icons list-item">
+      <div class="expense-icons d-flex justify-content-center list-item">
 
        <a href="#" class="edit-icon mx-2" data-id="${expense.id}">
         <i class="fas fa-edit"></i>
@@ -89,16 +89,19 @@ class UI {
     this.expenseList.appendChild(div);
   }
   editExpense(element) {
-    let id = parseInt(element.dataset.id);
-    let parent = element.parentElement.parentElement.parentElement;
-    this.expenseList.removeChild(parent);
-    let expense = this.itemList.filter((item) => item.id === id);
+    const id = parseInt(element.dataset.id);
+    const expense = this.itemList.filter((item) => item.id === id);
     this.expenseInput.value = expense[0].title;
     this.amountInput.value = expense[0].amount;
+    this.deleteExpense(element);
+  }
+  deleteExpense(element) {
+    const id = parseInt(element.dataset.id);
+    const parent = element.parentElement.parentElement.parentElement;
+    this.expenseList.removeChild(parent);      
     this.itemList = this.itemList.filter((item) => item.id !== id);
     this.showBalance();
-  }
-  deleteExpense(element) {}
+}
   totalExpense() {
     let total = 0;
     if (this.itemList.length > 0) {

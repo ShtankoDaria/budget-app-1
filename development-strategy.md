@@ -42,7 +42,15 @@ Building this site one step at a time
 
 ## 4. User Story: `Edit expense`
 
-- A user can edit an expense in the expenses list, the expense must remove the expense form the list and fill the expenseForm with the selected expense title and amount
+- A user can edit an expense from the expenses list, it must remove the expense form the list and fill the expenseForm with the selected expense title and amount and finally update the balance
+- I wrote the code in `js/ui.js` and `js/handler.js`
+- The handler calls the function responsible of editing an expense from the list, the handler is called using the `click` event of the `expenseList` HTML element.
+
+---
+
+## 5. User Story: `Delete expense`
+
+- A user can delete an expense from the expenses list, it must delete the expense form the list and update the balance
 - I wrote the code in `js/ui.js` and `js/handler.js`
 - The handler calls the function responsible of editing an expense from the list, the handler is called using the `click` event of the `expenseList` HTML element.
 
