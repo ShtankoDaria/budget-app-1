@@ -31,3 +31,11 @@ Building this site one step at a time
 - The handler calls the function responsible of adding a budget and process the form inputs, the handler is called using the `submit` event of the `budgetForm` HTML element.
 
 ---
+
+## 3. User Story: `Expense form`
+
+- A user can add a expense to the application, the expense title must not be empty and the amount must be greater or equal to 0, the user will be notified in case of an input error, if successful the new expense will be put on screen and the balance is updated
+- I wrote the code in `js/ui.js` and `js/handler.js`
+- The handler calls the function responsible of adding a expense and process the form inputs, the handler is called using the `submit` event of the `expenseForm` HTML element.
+
+---

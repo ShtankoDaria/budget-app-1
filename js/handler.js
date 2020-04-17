@@ -12,6 +12,7 @@ class Handler {
   }
   expenseFormHandler(event) {
     event.preventDefault();
+    this.ui.submitExpenseForm();
     log.push({
       handler: "expenseForm",
       object: JSON.parse(JSON.stringify(this.ui)),
